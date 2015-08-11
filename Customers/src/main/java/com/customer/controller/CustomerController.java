@@ -33,7 +33,7 @@ public class CustomerController {
 	
 	
 	@RequestMapping("/get/{customerId}")
-	public String getBook(@PathVariable int customerId, Map<String, Object> map) {
+	public String getCustomer(@PathVariable int customerId, Map<String, Object> map) {
 
 		Customer customer = customerService.getCustomer(customerId);
 
@@ -52,7 +52,7 @@ public class CustomerController {
 	}
 	
 	@RequestMapping("/delete/{customerId}")
-	public String deleteBook(@PathVariable("customerId") int customerId) {
+	public String deleteCustomer(@PathVariable("customerId") int customerId) {
 
 		customerService.deleteCustomer(customerId);
 
